@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="4D Gaussian Splatting for High-Fidelity Dynamic Reconstruction of Single-View Scenes.">
-  <meta name="keywords" content="SV-Gaussians, NeRF, 3D Gaussian">
+        content="SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction.">
+  <meta name="keywords" content="SurgicalGaussian, 3D Reconstruction, 3D Gaussian">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SV-Gaussians: 4D Gaussian Splatting for High-Fidelity Dynamic Reconstruction of Single-View Scenes</title>
+  <title>"SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -50,10 +50,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SV-Gaussians: 4D Gaussian Splatting for High-Fidelity Dynamic Reconstruction of Single-View Scenes</h1>
+          <h1 class="title is-1 publication-title">SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://sv-gaussians.github.io/"> Anonymous </a><sup>
+              <a href="https://surgicalgaussian.github.io/"> Anonymous </a><sup>
             <span class="author-block">             
           </div>
 
@@ -61,7 +61,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://sv-gaussians.github.io/"
+                <a href="https://surgicalgaussian.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -70,7 +70,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://sv-gaussians.github.io/"
+                <a href="https://surgicalgaussian.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -80,7 +80,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=KUDdMmy7z_M"
+                <a href="https://youtu.be/oEfHfG6_Ous"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -90,7 +90,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://sv-gaussians.github.io/"
+                <a href="https://surgicalgaussian.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -100,7 +100,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://sv-gaussians.github.io/"
+                <a href="https://surgicalgaussian.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -119,9 +119,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/imgaes/method.png" alt="method" height="100%">
+      <img src="./static/images/method.png" alt="method" height="100%">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf"> Architecture of our SV-Gaussians network.
+        <span class="dnerf"> Architecture of our SurgicalGaussian network.
       </h2>
     </div>
   </div>
@@ -136,19 +136,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            With the introduction of differentiable rendering frameworks, 
-            many advanced reconstruction techniques are proposed for both static and dynamic scenes, 
-            such as NeRFs and 3D Gaussian Splatting methods. However, there is a type of video on social platforms 
-            that is shot by users through fixed monocular cameras. For the reconstruction of such dynamic scenes 
-            under single-view observation, existing reconstruction techniques are difficult to produce satisfactory results. 
-            The problems include reconstruction blur in high-frequency details of objects and inaccurate estimation of geometry. 
-            These issues motivate us to study high-quality reconstruction method for single-view videos.  Inspired by 3D Gaussian Splatting, 
-            we propose a framework specifically designed for single-view dynamic scene reconstruction and editing, SV-Gaussians. Our method 
-            utilizes sparse point cloud of the scene as initialization for 3D Gaussians, and designs a deformation module to model the 
-            changes in Gaussian properties over time. We propose deformation regularization to ensure the consistency of adjacent Gaussian motions. 
-            To remove obstacles in the scene during reconstruction, we define color constraints based on obstacle mask to help Gaussians learn the 
-            true appearance of invisible regions. We conduct extensive experiments to evaluate our method and compare it with SOTA single-view reconstruction methods. 
-            Experiments show that our method has strong advantages in reconstruction quality and can achieve real-time rendering.
+            Dynamic reconstruction of deformable tissues in endoscopic video is a key technology for robot-assisted surgery.
+            Recent reconstruction methods based on neural radiance fields (NeRFs) have achieved remarkable results in the reconstruction of surgical scenes.
+            However, based on implicit representation, NeRFs struggle to capture the intricate details of objects in the scene and cannot achieve real-time rendering. 
+            In addition, restricted single view perception and occluded instruments also propose special challenges in surgical scene reconstruction. 
+            To address these issues, we develop SurgicalGaussian, a deformable 3D Gaussian Splatting method to model dynamic surgical scenes. 
+            Our approach models the spatio-temporal features of soft tissues at each time stamp via a forward-mapping deformation MLP and regularization to constrain local 3D Gaussians to comply with consistent movement. 
+            With the depth initialization strategy and tool mask-guided training, our method can remove surgical instruments and reconstruct hig-fidelity surgical scenes. 
+            Through experiments on various surgical videos, our network outperforms existing method on many aspects, including rendering quality, rendering speed and GPU usage.
           </p>
         </div>
       </div>
@@ -160,12 +155,11 @@
 <section class="section">
   <div class="container is-max-desktop">
          
-   <!-- Comparison with Reconstruction Methods -->
-        <h3 class="title is-4">Comparison with Reconstruction Methods</h3>
+   <!-- Comparison with EndoNeRF, EndoSurf, LerPlane and EndoGaussian -->
+        <h3 class="title is-4">Comparison with EndoNeRF, EndoSurf, LerPlane and EndoGaussian</h3>
         <div class="content has-text-justified">
           <p>
-           Comparison with other dynamic reconstruction methods: D-NeRF, NDR and DRSM. Our method SV-Gaussians reconstructs higher-fidelity results of dynamic scenes, 
-            such as human face, keyboard, and grass in the following videos.
+           Comparison with other methods on EndoNeRF dataset.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -175,7 +169,7 @@
                  preload
                  playsinline
                  width="100%">
-            <source src="./static/video/robot.mp4"
+            <source src="./static/video/pulling.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -186,9 +180,14 @@
                  preload
                  playsinline
                  width="100%">
-            <source src="./static/video/computer.mp4"
+            <source src="./static/video/cutting.mp4"
                     type="video/mp4">
           </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+           Comparison with other methods on StereoMIS dataset.
+          </p>
         </div>
         <div class="content has-text-centered">
           <video id="replay-video"
@@ -197,43 +196,24 @@
                  preload
                  playsinline
                  width="100%">
-            <source src="./static/video/rollerblade.mp4"
+            <source src="./static/video/intestine.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Comparison with Reconstruction Methods. -->
+                <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="100%">
+            <source src="./static/video/live.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/  Comparison with EndoNeRF, EndoSurf, LerPlane and EndoGaussian -->
 
-    <!-- Comparison with Video Inpainting Method -->
-        <h3 class="title is-4">Comparison with Video Inpainting Method</h3>
-        <div class="content has-text-justified">
-          <p>
-           We compared the results with ProPainter, a SOTA video inpainting method. Propainter removes objects but creates blur.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="100%">
-            <source src="./static/video/soccerball.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="100%">
-            <source src="./static/video/drift.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Comparison with Video Inpainting Method. -->
-              
+                 
   </div>
 </section>
               
