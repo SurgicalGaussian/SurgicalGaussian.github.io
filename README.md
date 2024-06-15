@@ -1,6 +1,6 @@
-# SV-Gaussians.github.io
+# SurgicalGaussian.github.io
 
-This is the repository that contains source code for the [SV-Gaussians website](https://sv-gaussians.github.io).
+This is the repository that contains source code for the [SurgicalGaussian website](https://surgicalgaussian.github.io).
 
 
 # Website License
