@@ -129,8 +129,8 @@ body {
          .results-carousel {
       display: flex;
       overflow: hidden;
-      width: 640px;
-      height: 360px;
+      width: 960px;
+      height: 540px;
       position: relative;
     }
 
@@ -143,8 +143,8 @@ body {
     }
 
     .results-carousel2 video {
-      width: 640px;
-      height: 360px;
+      width: 960px;
+      height: 540px;
     }
 
 .interpolation-panel {
