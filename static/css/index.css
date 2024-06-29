@@ -126,6 +126,8 @@ body {
       .results-carousel video {
         margin: 0;
       }
+
+
      .results-carousel2 {
        display: grid;
        grid-template-columns: repeat(4, 100%); /* 每个视频占据100%的宽度，共4个视频 */
