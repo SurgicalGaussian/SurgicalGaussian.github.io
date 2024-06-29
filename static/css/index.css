@@ -110,25 +110,42 @@ body {
 .publication-body img {
 }
 
-.results-carousel {
-  overflow: hidden;
-  min-height: 200px; /* 根据需要设置 */
-  min-width: 300px;  /* 根据需要设置 */
-}
+      .results-carousel {
+        overflow: hidden;
+      }
+      
+      .results-carousel .item {
+        margin: 5px;
+        overflow: hidden;
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        padding: 0;
+        font-size: 0;
+      }
+      
+      .results-carousel video {
+        margin: 0;
+      }
+         .results-carousel {
+      display: flex;
+      overflow: hidden;
+      width: 640px;
+      height: 360px;
+      position: relative;
+    }
 
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
-}
+    .results-carousel2 .item {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.5s ease-in-out;
+    }
 
-.results-carousel video {
-  margin: 0;
-}
-
+    .results-carousel2 video {
+      width: 640px;
+      height: 360px;
+    }
 
 .interpolation-panel {
   background: #f5f5f5;
