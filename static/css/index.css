@@ -129,8 +129,7 @@ body {
 
 
      .results-carousel2 {
-       display: grid;
-       grid-template-columns: repeat(4, 100%); /* 每个视频占据100%的宽度，共4个视频 */
+       display: flex;
        overflow: hidden;
        width: 960px;  /* 设置轮播容器的宽度 */
        height: 540px; /* 设置轮播容器的高度 */
@@ -139,6 +138,7 @@ body {
       }
 
     .results-carousel2 .item {
+      min-width: 100%
       display: flex;
       justify-content: center;
       align-items: center;
