@@ -131,8 +131,8 @@ body {
      .results-carousel2 {
        display: flex;
        overflow: hidden;
-       width: 960px;  /* 设置轮播容器的宽度 */
-       height: 540px; /* 设置轮播容器的高度 */
+       width: 1920px;  /* 设置轮播容器的宽度 */
+       height: 1080px; /* 设置轮播容器的高度 */
        position: relative;
        transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */
       }
