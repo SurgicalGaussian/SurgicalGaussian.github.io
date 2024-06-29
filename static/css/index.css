@@ -112,6 +112,8 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  min-height: 200px; /* 根据需要设置 */
+  min-width: 300px;  /* 根据需要设置 */
 }
 
 .results-carousel .item {
