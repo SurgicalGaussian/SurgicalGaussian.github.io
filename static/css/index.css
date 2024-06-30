@@ -112,7 +112,8 @@ body {
 
 .results-carousel {
   overflow: hidden;
-
+  width: 1920px;  /* 设置轮播容器的宽度 */
+  height: 1080px; 
 }
 
 .results-carousel .item {
