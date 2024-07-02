@@ -59,7 +59,7 @@ function changeVideo2(index) {
       videoPlayer2.classList.add('show');
       updateDots2();
     };
-  }, 500);
+  }, 1000);
 }
 
 initDots2();
