@@ -75,7 +75,7 @@ h6 {
 
 .articlecontrainer {
     max-width: 1000px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 
@@ -224,6 +224,54 @@ footer {
 
 
 #dots-container {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#prev-button-2,
+#next-button-2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+#prev-button-2:before,
+#next-button-2:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#prev-button-2 {
+    left: 5px;
+}
+
+#next-button-2 {
+    right: 5px;
+}
+
+#prev-button-2:before {
+    border-width: 10px 16px 10px 0;
+    border-color: transparent #808080 transparent transparent;
+    margin-right: 5px;
+}
+
+#next-button-2:before {
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #808080;
+    margin-left: 5px;
+}
+
+
+#dots-container-2 {
     text-align: center;
     padding-top: 10px;
 }
