@@ -75,7 +75,7 @@ h6 {
 
 .articlecontrainer {
     max-width: 1000px;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 20px;
 
@@ -179,6 +179,8 @@ footer {
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
+    border: none;  /* 移除默认边框 */
+    border-radius: 50%;  /* 使按钮变为圆形 */
     background-color: transparent;
     cursor: pointer;
     padding: 0;
@@ -201,13 +203,13 @@ footer {
 }
 
 #prev:before {
-    border-width: 5px 8px 5px 0;
+    border-width: 10px 16px 10px 0;
     border-color: transparent #808080 transparent transparent;
     margin-right: 5px;
 }
 
 #next:before {
-    border-width: 5px 0 5px 8px;
+    border-width: 10px 0 10px 16px;
     border-color: transparent transparent transparent #808080;
     margin-left: 5px;
 }
