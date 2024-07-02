@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction.">
   <meta name="keywords" content="SurgicalGaussian, 3D Reconstruction, 3D Gaussian">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SurgicalGaussian: Deformable 3D Gaussians for High-Fidelity Surgical Scene Reconstruction.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -142,6 +142,11 @@
   </div>
 </section>
 
+
+
+
+
+<div class="container">
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -151,51 +156,16 @@
       </h2>
     </div>
   </div>
+ </div>
 </section>
 
-<!--dsf-->
-<!--              
-<section class="hero is-light is-small">
- 
-      <div id="results-carousel" class="carousel results-carousel">
-        
-        <div class="item item-pulling">
-          <video poster="" id="pulling" autoplay controls muted loop playsinline height="90%">
-            <source src="./static/video/pulling.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        
-        <div class="item item-cutting">
-          <video poster="" id="cutting" autoplay controls muted loop playsinline height="90%">
-            <source src="./static/video/cutting.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        
-        <div class="item item-intestine">
-          <video poster="" id="intestine" autoplay controls muted loop playsinline height="90%">
-            <source src="./static/video/intestine.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-live">
-          <video poster="" id="live" autoplay controls muted loop playsinline height="90%">
-            <source src="./static/video/live.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
- 
-  </div> 
-</section>              
--->
-              
 <!-- 视频滚动 -->
 <section class="section">
+ <div class="container is-max-desktop">
+ 
 
-  <div class="articlecontrainer">
   <br>
-  <div id="video-container" style="height: 400px;">
+  <div id="video-container" style="height: 320px;">
     <video id="video-player" autoplay muted playsinline controls>
       <source src=" " type="video/mp4">
       Your browser does not support the video tag.
@@ -206,61 +176,10 @@
   <div id="dots-container"></div>
   <br>
   </div>
-<script src="./static/js/ppage.js"></script>
 
+<script src="./static/js/ours-gt.js"></script>
 </section>
-<!-- 视频滚动 -->     
-
-              
- <!--                
-<section class="mt-4">
-            <div class="container">
-                <div class="px-md-4 py-4">
-                    <h2>Results and Comparisons</h2>
-                    <p class="mt-3 text-justify">
-                        We test our proposed method on typical robotic surgery stereo videos from 6 cases of our in-house DaVinci robotic prostatectomy data.
-                        For comparison, we take the most recent state-of-the-art surgical scene reconstruction method of <a href="https://arxiv.org/abs/2107.00229" target="_blank">E-DSSR</a> as a strong comparison.
-                        Qualitative and quantitative comparisons between our method and E-DSSR are exhibited as below. Note that PSNR and SSIM are photometric errors between projections of reconstructed point clouds and ground truth images.
-                    </p>
-                    <div id="results_carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-       
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <video width="100%" playsinline muted controls class="pb-4">
-                                    <source src="./static/video/pulling.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="carousel-item">
-                                <video width="100%" playsinline muted controls class="pb-4">
-                                    <source src="./static/video/pulling.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="carousel-item">
-                                <video width="100%" playsinline muted controls class="pb-4">
-                                    <source src="./static/video/pulling.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="carousel-item">
-                                <video width="100%" playsinline muted controls class="pb-4">
-                                    <source src="./static/video/pulling.mp4" type="video/mp4">
-                                </video>
-                            </div>
-
-                        </div>
-                        <button class="carousel-control-prev d-none d-md-block d-lg-block" style="margin-left: -50px; width:50px;" type="button" data-bs-target="#results_carousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next d-none d-md-block d-lg-block" style="margin-right: -50px; width: 50px;" type="button" data-bs-target="#results_carousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
- </section>
- -->             
-              
+<!-- 视频滚动 -->              
               
 <section class="section">
   <div class="container is-max-desktop">
@@ -286,34 +205,46 @@
   </div>
 </section>
 
+<!-- 视频滚动 -->
+<section class="section">
+ <div class="container is-max-desktop">
+ <h3 class="title is-4">Comparison Experiments</h3>
+        <div class="content has-text-justified">
+          <p>
+           Comparison with EndoNeRF, EndoSurf, LerPlane and EndoGaussian:
+          </p>
+        </div>
+  <div class="articlecontrainer">
+  <br>
+  <div id="video-container" style="height: 450px; width: 100%">
+    <video id="video-player-2" autoplay muted playsinline controls>
+      <source src=" " type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="prev-button-2"></button>
+    <button id="next-button-2"></button>
+  </div>
+  <div id="dots-container-2"></div>
+  <br>
+  </div>
+<script src="./static/js/ppage.js"></script>
+ </div>
+</section>
+<!-- 视频滚动 -->
+
 <section class="section">
   <div class="container is-max-desktop">
-         
+        
    <!-- Comparison Experiments -->
+   <!-- 
         <h3 class="title is-4">Comparison Experiments</h3>
         <div class="content has-text-justified">
           <p>
            Comparison with EndoNeRF, EndoSurf, LerPlane and EndoGaussian:
           </p>
         </div>
-        <div class="articlecontrainer">
-  <br>
-  <div id="video-container" style="height: 400px;">
-    <video id="video-player" autoplay muted playsinline controls>
-      <source src=" " type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <button id="prev"></button>
-    <button id="next"></button>
-  </div>
-  <div id="dots-container"></div>
-  <br>
-  </div>
-<script src="./static/js/ppage.js"></script>
- </div>
-
-
-  <!--
+          
+        
         <div class="content has-text-centered">
           <video id="replay-video"
                  controls
@@ -361,9 +292,8 @@
                     type="video/mp4">
           </video>
         </div>
-   -->
 
-        <!--/ Comparison Experiments. -->
+         -->
     
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
