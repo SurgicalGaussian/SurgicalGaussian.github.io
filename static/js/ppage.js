@@ -9,10 +9,10 @@ function copyToClipboard() {
 }
 
 const videos = [
-  "./static/video/cutting.mp4",
-  "./static/video/intestine.mp4",
-  "./static/video/live.mp4",
-  "./static/video/pulling.mp4"
+  "./static/video/pulling-ours.mp4",
+  "./static/video/cutting-ours.mp4",
+  "./static/video/intestine-ours.mp4",
+  "./static/video/liver-ours.mp4"
 ];
 let currentIndex = 0;
 
