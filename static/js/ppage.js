@@ -7,36 +7,37 @@ function copyToClipboard() {
     console.error('Failed to copy text: ', err);
   });
 }
+ 
 
-const videos = [
-  "./static/video/pulling.mp4",
+const videosGroup2 = [
+ "./static/video/pulling.mp4",
   "./static/video/cutting.mp4",
   "./static/video/intestine.mp4",
   "./static/video/liver.mp4"
 ];
-let currentIndex = 0;
+let currentIndex2 = 0;
 
-const videoPlayer = document.getElementById('video-player');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
-const dotsContainer = document.getElementById('dots-container');
+const videoPlayer2 = document.getElementById('video-player-2');
+const dotsContainer2 = document.getElementById('dots-container-2');
+const prevButton2 = document.getElementById('prev-button-2');
+const nextButton2 = document.getElementById('next-button-2');
 
-function initDots() {
-  for (let i = 0; i < videos.length; i++) {
+function initDots2() {
+  for (let i = 0; i < videosGroup2.length; i++) {
     let dot = document.createElement('span');
     dot.classList.add('dot');
     if (i === 0) {
       dot.classList.add('active');
     }
-    dot.addEventListener('click', () => changeVideo(i));
-    dotsContainer.appendChild(dot);
+    dot.addEventListener('click', () => changeVideo2(i));
+    dotsContainer2.appendChild(dot);
   }
 }
 
-function updateDots() {
-  const dots = document.querySelectorAll('.dot');
+function updateDots2() {
+  const dots = dotsContainer2.querySelectorAll('.dot');
   dots.forEach((dot, index) => {
-    if (index === currentIndex) {
+    if (index === currentIndex2) {
       dot.classList.add('active');
     } else {
       dot.classList.remove('active');
@@ -44,26 +45,28 @@ function updateDots() {
   });
 }
 
-function changeVideo(index) {
-  currentIndex = (index + videos.length) % videos.length;
-  let currentSource = videos[currentIndex];
+function changeVideo2(index) {
+  currentIndex2 = (index + videosGroup2.length) % videosGroup2.length;
+  let currentSource = videosGroup2[currentIndex2];
 
-  videoPlayer.classList.remove('show');
+  videoPlayer2.classList.remove('show');
 
   setTimeout(() => {
-    videoPlayer.src = currentSource;
-    videoPlayer.play();
+    videoPlayer2.src = currentSource;
+    videoPlayer2.play();
 
-    videoPlayer.onloadeddata = () => {
-      videoPlayer.classList.add('show');
-      updateDots();
+    videoPlayer2.onloadeddata = () => {
+      videoPlayer2.classList.add('show');
+      updateDots2();
     };
   }, 500);
 }
 
-initDots();
-videoPlayer.addEventListener('ended', () => changeVideo(currentIndex + 1));
-prevButton.addEventListener('click', () => changeVideo(currentIndex - 1));
-nextButton.addEventListener('click', () => changeVideo(currentIndex + 1));
+initDots2();
+videoPlayer2.addEventListener('ended', () => changeVideo2(currentIndex2 + 1));
 
-changeVideo(0);
+// Optional: Handle previous and next buttons
+prevButton2.addEventListener('click', () => changeVideo2(currentIndex2 - 1));
+nextButton2.addEventListener('click', () => changeVideo2(currentIndex2 + 1));
+
+changeVideo2(0);
